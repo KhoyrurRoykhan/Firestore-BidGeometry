@@ -44,8 +44,8 @@ export const LoginGuru = async (req, res) => {
     res.cookie('refreshToken', refreshToken, {
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000, // 1 hari
-    //   secure: process.env.NODE_ENV === 'production',
-    //   sameSite: 'none'
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'none'
     });
 
     // 6. Kirim access token ke client
