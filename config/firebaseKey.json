@@ -1,14 +1,13 @@
 {
-    "type": "service_account",
-    "project_id": "bidgeometry",
-    "private_key_id": "ed4163ccf5c8dd6c7e354c7c177a92f72f4a7779",
-    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCy/c8sLZ4DL2Xl\nqpKCi/CixwhR2MUGWbxpEXUeARvOg6gOzzw/Urasn6coV09PlJQM41r1WXZz/9Oz\n6mE84xnssyIB1YFLbIbbgcEhc/eKeyBJUCzSnF3ifLyWiT+5FTZo79HlY8/HMDL+\n9SHZuHZm1/yizHMStCAcJDwrWi5jJ2rZ/IyLWWubltxlGxGf0iulxX0ZrCbypUWZ\nUoElRn1OceymT3pbgQcFhVONUmF0INuK2nM3NsAN3uZ9ZLx79WN/wB2FXWZrCXJ6\n4+ys4THRE8boJUebDfjmKpGOp/wASSoDnHDUH+T18qfU4rWZmxMc1B26y4vz681U\nSyRNDkGVAgMBAAECggEAA/JB5yXzLyBdeLJSswtsq0jx9jpJocUkAhS8z4QKmUOF\nH9ObbvGxRPBZCjQDKrWl1SDpQ9aMnKxCotujZekxVaHfcElXbsl+Q/ZCDC1plWn3\nZeivjE4Msm5MCv+e9Geg0vmbxZkIsVxcncH/+SHTPC2rVaD4eoff/+7WljOIcm5z\nolcX3MVrVmltu0Zn/jiankc3nGoBZs/+ohevTDKsqZeRBRbqYNcNaUM3qw8RBZGP\nstXRW9HKJdnWPM7hffprybfSw8E/LtSFngj8RTQGb+M1nQx56gVl/LW9/lWCCILG\nE8IEHX9q3vGbg0XC50/r/+s3f+yuTB7Z+qloFjnhswKBgQDs23bQigaDoFdG6Ymx\nKg8T6suiuM6BF9Z/PfSdy4LfppMHK2WN9yaR59c8vLOWPZrXSx6ozf0G54Puygfl\nuluQCcPdEt2gxQ2nGHZLHy5CcOwi4hD5wJyGircBlNH6eBBGfr/r9LEz01fHS7Ge\nj0w1Hu5bLI6yOZZzZ/Nohd46YwKBgQDBdRxrtRCf9AaZEOLkM8yWUJ0cXTaR55Hc\n4VPyryCxilGE5OLn0PJGL4a3/e9A1+/uLyPLPA73qpqU7V2FCrzIaeSGyHnPVBtT\n302fcdSpTqB77LPdvgPaIpof2dS53OtFp1e566bDwAaN61wCnVP2aAkRyhov1JQ6\nvRvbLVuZpwKBgGwA9wDIr4e9yY5wV3UNtKpkWk7s7l03PXvwCGcbsaXCEzElvL0r\ngc7uZNsxQMK1fLHHc0eOBl7rmuF8BnXesHnRuhpIy/7PXBZhtS80HKf3TfXqF8uK\n5NUE08ZI0ibgMKu0iFdT0KnNKS2benbO6PUgEZhJjRf/4nblY7y5rkf5AoGAOYCt\n6fXv8xt9upGiX2JmNWfQy1WJmuTSHm17nm8fsKYEhRPjvjQFT4dg69+29fc5gfrR\nEN/RMxyqxgmn+puucYPIQaflTRMa7Fs7n2EebRTJ7wv0iryoOHaAiWceLADWjeWn\n1cON1jGFwTlsJ/rLsjpKN9dy4TS2up7rYMKir5ECgYEA1Pb/NDQkQk9XLzqgn49X\nsVd+eCPo82vFkv12QMkXQ/sxpjIM1NZ8jPWzLapE52p7gQb9DS+Vg3H6c4UI2CHS\nRTU8mU+lK97+OkFkM3RRZXjZZhNYRUvBW0RyJUeekDz9muGwreWoSx2M8zEvnbGZ\nKZDkHXHmRaivfpjaQO83hkU=\n-----END PRIVATE KEY-----\n",
-    "client_email": "firebase-adminsdk-fbsvc@bidgeometry.iam.gserviceaccount.com",
-    "client_id": "103696079274794049298",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40bidgeometry.iam.gserviceaccount.com",
-    "universe_domain": "googleapis.com"
-  }
-  
+  "type": "service_account",
+  "project_id": "bidgeometry",
+  "private_key_id": "7ffdf8a63ae8555f4487481ce50f26f48b19eff6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCjdtwDsnFOt4TJ\nJd9PM/1OAMXQWEpMGdxWSLk9gmpaVsaVC/AR8SCve0SIksB4/V+DpwHyggvWc10a\nVBZpU96X3oSuAsC3FLLgh6/U1BZl94nFjev0hTCd+d9Nxao4CVaSTf0lVBFWAytr\nOQAf8n3x4feEnQq6sznWYyNK51MPmPf9C6Noar7h4fWopdps2lE4d1chBEFjIq/7\ndOL1k7Bd+a5YnRQbCplecsKDn2Giy5C+Kl/yWUGdmWsnB+4NU0BRRHBruUacntkt\nr6Pa/psnn0G0/zHzwSKa5rpd3K/ZNIv1h0DY7jyQYxdcCbcKe9/Xf1xozreuhlsI\ntbo/GGQbAgMBAAECggEAKLSwlTsafD+3EWAc+9w2d/Y5TGiwF8NY2yPA/VA8q8Jw\nMS2H2u/w88H+jwP8aiSuZFpyYbGAwSZ5SNUnv5LjG26OG8cTtoOxB7jCUH2AFmRO\nKqPs3jdMpApVUUin2sx4gnZpU6Jbrs+bQFgxb8MzGcjrmlqBEX0QKhMF9uEkDf3j\nWRtU6hq9hY1DoFikD+EwPzShjuM0HvrMYc+EvlECgqxEXfp6sTKJhNkLWTtgkOSs\nV0s/h3vtZasxELlGbuwDpX7tYoc4fZAmsoTBwl/zE3Few4oWGyyZl/k8gODuPcE5\ni0igL0/97x3Vh2vFd9DJ8kZ3qNalTHu1OQg5u9roAQKBgQDikYMkSe8/K+ouP4sZ\nd5cZdDvamA3Kz8HWZEgYQPiQHCPhfq+Ty60eHNCX1hJ57UkB5gSKHPYWkeMRemDg\nOGkdpdUYFkgh8ZsGLS+q6O5ZtUbXw2Kfm9w4b1neKgHGO3Irizw1Yku7gPGD4kvF\nVWdV86bfl1Y3QJ3+6Mf0/wRAcQKBgQC4stUTnTuhVm0YA0PYaqOXooZEQp0RJTcC\nTXN3Kbk7DebBpb3uDmeag1mhWx+TL+f/WMgc0XFlwAhQtAUPNYDvMeuJAEmRBDp4\nm20U8YjkR5vkmKAvX+IUQ1lWxfdJgumqglps+GONHxIhcrGx5u1bqVxY8F4tjoTx\n4rrHMbMzSwKBgADWLLfLlhiTnu/AyFC1wlcTuMzb1uEy1zJleGauhrxxfihtAVT4\nYZFE5fhJkBPnLmfVY5rm9Hms3DvKSeVKEAlN/XVzT5zgeYQSUqS863RlWPee/xQ7\nzRpgPuK1IQCMY6WJhBVmYYU1uq6T/VejMxh8J9eXhXf6wxqX3XUoI+nhAoGBAJn6\n1XM1uVnnQKotRqmtNdeb8k4ELwf1O6gaw/GLglZ+X2v/7pkBv1Psv5Oq8Wb3IHYc\nITENV3mZoBUQD8u/Mk+4EYI1EB/rI4gbI9S7DQIrxQbOS3VTfZqhD2EtR90sW/wA\nEr0YU356cdYa1ZPYTvgE+O1Y71sRnzo9aLPadmiDAoGBAIeHMriykwqvZjckcZeW\nHbA6Z9pArZGdSUiNFQ6j+VrJ5nc3JxfHCnUjyFcF35C/4Nuxi0wOA6HOdjY7sw5E\n+zskbYXuXrkrI8sQAqWCxAAZQBgPW20ubzO1KMjq++8vN04ODQGzsVLiCSZsl3iT\nrn7Zv4DbyBUHCQn3gjf5sVfc\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@bidgeometry.iam.gserviceaccount.com",
+  "client_id": "103696079274794049298",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40bidgeometry.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
