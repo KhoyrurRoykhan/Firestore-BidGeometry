@@ -1,8 +1,5 @@
 import dotenv from 'dotenv';
 import admin from "firebase-admin";
-
-dotenv.config(); // Harus dipanggil sebelum akses process.env
-
 import serviceAccount from "./firebaseKey.json" assert { type: "json" };
 
 if (!admin.apps.length) {
