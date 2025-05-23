@@ -4,4 +4,3 @@
 .pnp.js
 node_modules/
 .env
-.firebaseKey.json
