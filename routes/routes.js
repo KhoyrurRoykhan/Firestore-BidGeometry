@@ -14,7 +14,7 @@ import { RegisterGuru } from "../models/GuruModel.js";
 import { LoginGuru, LogoutGuru, getKKMByToken, updateKKM } from "../controllers/GuruController.js";
 import { refreshTokenGuru } from "../controllers/RefreshTokenGuru.js";
 import { getNilaiByTokenKelas, getNilaiByUser, updateEvaluasi, updateKuis1, updateKuis2, updateKuis3, updateKuis4, updateKuis5 } from "../controllers/NilaiController.js";
-import { verifyGuruToken } from "../middleware/VerifyTokenGuru.js";
+import { verifyGuruToken } from "../middleware/verifyTokenGuru.js";
 import { verifyToken } from "../middleware/verifyToken.js";
 
 const routes = express.Router();
