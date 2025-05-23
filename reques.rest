@@ -1,0 +1,16 @@
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email": "johndoe@example.com",
+  "password": "yourPassword"
+}
+
+###
+DELETE http://localhost:5000/logout
+
+###
+GET http://localhost:5000/users
+Authorization: Bearer
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlLmNvbSIsImlhdCI6MTcyNTU0NTYxOSwiZXhwIjoxNzI1NTQ1NjQ0fQ.yDyaGIFRFB5OWXQRmZJzURi5NcCjtOUUB_3mnKq4L-I
