@@ -11,7 +11,14 @@ const app = express();
 // Firestore tidak perlu "authenticate" atau "sync" seperti Sequelize
 console.log("Firestore initialized...");
 
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors({
+    credentials: true,
+    origin: [
+      "http://localhost:3000",
+      "https://bidawang-geometry-app.vercel.app"
+    ]
+  }));
+  
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.static("public"));
