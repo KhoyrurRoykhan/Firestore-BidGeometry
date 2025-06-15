@@ -4,6 +4,7 @@
 
   const usersCollection = db.collection("users");
   const guruCollection = db.collection("guru");
+  const kkmCollection = db.collection("kkm");
 
   export const Login = async (req, res) => {
     try {
@@ -299,10 +300,9 @@
 
     export const getKKM = async (req, res) => {
       try {
-        const token_kelas = req.token_kelas; // didapat dari JWT
+        const token_kelas = req.token_kelas; // dari JWT siswa
     
-        // Cari dokumen guru dengan token yang cocok
-        const snapshot = await guruCollection
+        const snapshot = await kkmCollection
           .where("token", "==", token_kelas)
           .limit(1)
           .get();
@@ -311,15 +311,15 @@
           return res.status(404).json({ msg: "KKM tidak ditemukan" });
         }
     
-        const guruDoc = snapshot.docs[0];
-        const data = guruDoc.data();
+        const kkmData = snapshot.docs[0].data();
     
-        res.json({ kkm: data.kkm });
+        res.json({ kkm: kkmData });
       } catch (err) {
         console.error(err);
         res.status(500).json({ msg: "Gagal mengambil KKM" });
       }
     };
+    
 
     export const getProgresTantanganSiswa = async (req, res) => {
       try {
