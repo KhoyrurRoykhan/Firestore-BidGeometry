@@ -2,7 +2,7 @@ import db from "../config/firebase.js";
 import bcrypt from "bcrypt"; // pastikan sudah di-install
 
 
-const usersCollection = db.collection("users");
+const siswaCollection = db.collection("siswa");
 const nilaiCollection = db.collection("nilai_siswa");
 
 export const Register = async (userData) => {
@@ -19,13 +19,13 @@ export const Register = async (userData) => {
     }
 
     // 2. Cek apakah email sudah digunakan
-    const emailExists = await usersCollection.where("email", "==", email).get();
+    const emailExists = await siswaCollection.where("email", "==", email).get();
     if (!emailExists.empty) {
       throw new Error("Email sudah terdaftar");
     }
 
     // 3. Cek apakah NISN sudah digunakan
-    const nisnExists = await usersCollection.where("nisn", "==", nisn).get();
+    const nisnExists = await siswaCollection.where("nisn", "==", nisn).get();
     if (!nisnExists.empty) {
       throw new Error("NISN sudah terdaftar");
     }
@@ -35,7 +35,7 @@ export const Register = async (userData) => {
     const hashedPassword = await bcrypt.hash(password, salt);
 
     // 5. Simpan user baru
-    const userDocRef = await usersCollection.add({
+    const userDocRef = await siswaCollection.add({
       nama,
       nisn,
       email,
@@ -77,20 +77,20 @@ export const Register = async (userData) => {
 
 // Ambil semua user
 export const getAllUsers = async () => {
-  const snapshot = await usersCollection.get();
+  const snapshot = await siswaCollection.get();
   return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 };
 
 // Ambil user berdasarkan ID dokumen
 export const getUserById = async (id) => {
-  const doc = await usersCollection.doc(id).get();
+  const doc = await siswaCollection.doc(id).get();
   if (!doc.exists) return null;
   return { id: doc.id, ...doc.data() };
 };
 
 // Ambil user berdasarkan email
 export const getUserByEmail = async (email) => {
-  const snapshot = await usersCollection.where("email", "==", email).limit(1).get();
+  const snapshot = await siswaCollection.where("email", "==", email).limit(1).get();
   if (snapshot.empty) return null;
   const doc = snapshot.docs[0];
   return { id: doc.id, ...doc.data() };
@@ -98,12 +98,12 @@ export const getUserByEmail = async (email) => {
 
 // Update user
 export const updateUser = async (id, data) => {
-  await usersCollection.doc(id).update(data);
+  await siswaCollection.doc(id).update(data);
   return true;
 };
 
 // Hapus user
 export const deleteUser = async (id) => {
-  await usersCollection.doc(id).delete();
+  await siswaCollection.doc(id).delete();
   return true;
 };

@@ -1,7 +1,7 @@
 import db from "../config/firebase.js";
 
 const nilaiCollection = db.collection("nilai_siswa");
-const usersCollection = db.collection("users");
+const usersCollection = db.collection("siswa");
 
 export const getNilaiByTokenKelas = async (req, res) => {
   const { token_kelas } = req.query;

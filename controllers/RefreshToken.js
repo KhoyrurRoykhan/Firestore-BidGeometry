@@ -1,7 +1,7 @@
 import db from "../config/firebase.js";
 import jwt from "jsonwebtoken";
 
-const usersCollection = db.collection("users");
+const usersCollection = db.collection("siswa");
 
 export const refreshToken = async (req, res) => {
   try {

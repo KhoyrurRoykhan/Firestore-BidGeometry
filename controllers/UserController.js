@@ -2,7 +2,7 @@
   import jwt from "jsonwebtoken";
   import db from "../config/firebase.js";
 
-  const usersCollection = db.collection("users");
+  const usersCollection = db.collection("siswa");
   const guruCollection = db.collection("guru");
   const kkmCollection = db.collection("kkm");
 
