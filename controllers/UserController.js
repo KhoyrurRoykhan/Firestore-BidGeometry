@@ -2,7 +2,7 @@
   import jwt from "jsonwebtoken";
   import db from "../config/firebase.js";
 
-  const siswaCollection = db.collection("siswa");
+  const usersCollection = db.collection("users");
   const guruCollection = db.collection("guru");
   const kkmCollection = db.collection("kkm");
 
@@ -11,7 +11,7 @@
       const { email, password } = req.body;
 
       // Cek apakah user dengan email tersebut ada
-      const snapshot = await siswaCollection.where("email", "==", email).limit(1).get();
+      const snapshot = await usersCollection.where("email", "==", email).limit(1).get();
       if (snapshot.empty) {
         return res.status(404).json({ msg: "Email tidak ditemukan" });
       }
@@ -43,7 +43,7 @@
       );
 
       // Simpan refresh_token ke database
-      await siswaCollection.doc(userId).update({
+      await usersCollection.doc(userId).update({
         refresh_token: refreshToken,
       });
 
@@ -69,7 +69,7 @@
         if (!refreshToken) return res.sendStatus(204); // No content, tidak perlu logout
     
         // Cari user berdasarkan refresh_token
-        const snapshot = await siswaCollection
+        const snapshot = await usersCollection
           .where("refresh_token", "==", refreshToken)
           .limit(1)
           .get();
@@ -80,7 +80,7 @@
         const userId = userDoc.id;
     
         // Hapus refresh_token dari Firestore
-        await siswaCollection.doc(userId).update({
+        await usersCollection.doc(userId).update({
           refresh_token: null,
         });
     
@@ -110,7 +110,7 @@
         const userId = decoded.userId;
     
         // Ambil data user dari Firestore berdasarkan ID
-        const userDoc = await siswaCollection.doc(userId).get();
+        const userDoc = await usersCollection.doc(userId).get();
     
         if (!userDoc.exists) {
           return res.status(404).json({ msg: "Siswa tidak ditemukan" });
@@ -145,7 +145,7 @@
         }
     
         // Ambil dokumen user
-        const userRef = siswaCollection.doc(userId);
+        const userRef = usersCollection.doc(userId);
         const userDoc = await userRef.get();
     
         if (!userDoc.exists) {
@@ -174,7 +174,7 @@
           return res.status(400).json({ msg: "token_kelas harus disertakan" });
         }
     
-        const snapshot = await siswaCollection.where("token_kelas", "==", token_kelas).get();
+        const snapshot = await usersCollection.where("token_kelas", "==", token_kelas).get();
         const count = snapshot.size;
     
         res.json({ count });
@@ -189,7 +189,7 @@
         const { token_kelas } = req.query;
     
         // Query Firestore: cari dokumen dengan token_kelas dan progres_belajar = 28
-        const snapshot = await siswaCollection
+        const snapshot = await usersCollection
           .where("token_kelas", "==", token_kelas)
           .where("progres_belajar", "==", 28)
           .get();
@@ -207,7 +207,7 @@
       try {
         const { token_kelas } = req.query;
     
-        const snapshot = await siswaCollection
+        const snapshot = await usersCollection
           .where("token_kelas", "==", token_kelas)
           .where("progres_tantangan", "==", 12)
           .get();
@@ -230,7 +230,7 @@
           return res.status(400).json({ msg: "Token kelas tidak ditemukan dalam permintaan" });
         }
     
-        const snapshot = await siswaCollection
+        const snapshot = await usersCollection
           .where("token_kelas", "==", token_kelas)
           .get();
     
@@ -263,12 +263,12 @@
         const { id } = req.params;
         const { nama, nisn } = req.body;
     
-        const userDoc = await siswaCollection.doc(id).get();
+        const userDoc = await usersCollection.doc(id).get();
         if (!userDoc.exists) {
           return res.status(404).json({ msg: "Siswa tidak ditemukan" });
         }
     
-        await siswaCollection.doc(id).update({
+        await usersCollection.doc(id).update({
           nama,
           nisn
         });
@@ -284,12 +284,12 @@
       try {
         const { id } = req.params;
     
-        const userDoc = await siswaCollection.doc(id).get();
+        const userDoc = await usersCollection.doc(id).get();
         if (!userDoc.exists) {
           return res.status(404).json({ msg: "Siswa tidak ditemukan" });
         }
     
-        await siswaCollection.doc(id).delete();
+        await usersCollection.doc(id).delete();
     
         res.json({ msg: "Data siswa berhasil dihapus" });
       } catch (error) {
@@ -330,7 +330,7 @@
         const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
         const userId = decoded.userId;
     
-        const userDoc = await siswaCollection.doc(userId).get();
+        const userDoc = await usersCollection.doc(userId).get();
     
         if (!userDoc.exists) {
           return res.status(404).json({ msg: "Siswa tidak ditemukan" });
@@ -359,7 +359,7 @@
           return res.status(400).json({ msg: "Nilai progres_tantangan tidak boleh kosong" });
         }
     
-        const userDocRef = siswaCollection.doc(userId);
+        const userDocRef = usersCollection.doc(userId);
         const userDoc = await userDocRef.get();
     
         if (!userDoc.exists) {
