@@ -1,14 +1,14 @@
 import db from "../config/firebase.js";
 
 const nilaiCollection = db.collection("nilai_siswa");
-const usersCollection = db.collection("users");
+const siswaCollection = db.collection("users");
 
 export const getNilaiByTokenKelas = async (req, res) => {
   const { token_kelas } = req.query;
 
   try {
     // Ambil semua user dengan token_kelas yang sesuai
-    const usersSnapshot = await usersCollection
+    const usersSnapshot = await siswaCollection
       .where("token_kelas", "==", token_kelas)
       .get();
 
@@ -62,7 +62,7 @@ export const getNilaiByUser = async (req, res) => {
 
   try {
     // Cari user berdasarkan email
-    const userSnapshot = await usersCollection.where("email", "==", email).limit(1).get();
+    const userSnapshot = await siswaCollection.where("email", "==", email).limit(1).get();
     if (userSnapshot.empty) {
       return res.status(404).json({ msg: "User tidak ditemukan" });
     }
@@ -94,7 +94,7 @@ export const updateKuis1 = async (req, res) => {
 
   try {
     // 🔍 Cari user berdasarkan email
-    const userSnapshot = await usersCollection.where("email", "==", email).limit(1).get();
+    const userSnapshot = await siswaCollection.where("email", "==", email).limit(1).get();
     if (userSnapshot.empty) {
       return res.status(404).json({ msg: "User tidak ditemukan" });
     }
@@ -136,7 +136,7 @@ export const updateKuis2 = async (req, res) => {
 
   try {
     // 🔍 Cari user berdasarkan email
-    const userSnapshot = await usersCollection.where("email", "==", email).limit(1).get();
+    const userSnapshot = await siswaCollection.where("email", "==", email).limit(1).get();
     if (userSnapshot.empty) {
       return res.status(404).json({ msg: "User tidak ditemukan" });
     }
@@ -178,7 +178,7 @@ export const updateKuis3 = async (req, res) => {
 
   try {
     // 🔍 Cari user berdasarkan email
-    const userSnapshot = await usersCollection.where("email", "==", email).limit(1).get();
+    const userSnapshot = await siswaCollection.where("email", "==", email).limit(1).get();
     if (userSnapshot.empty) {
       return res.status(404).json({ msg: "User tidak ditemukan" });
     }
@@ -220,7 +220,7 @@ export const updateKuis4 = async (req, res) => {
 
   try {
     // 🔍 Cari user berdasarkan email
-    const userSnapshot = await usersCollection.where("email", "==", email).limit(1).get();
+    const userSnapshot = await siswaCollection.where("email", "==", email).limit(1).get();
     if (userSnapshot.empty) {
       return res.status(404).json({ msg: "User tidak ditemukan" });
     }
@@ -262,7 +262,7 @@ export const updateKuis5 = async (req, res) => {
 
   try {
     // 🔍 Cari user berdasarkan email
-    const userSnapshot = await usersCollection.where("email", "==", email).limit(1).get();
+    const userSnapshot = await siswaCollection.where("email", "==", email).limit(1).get();
     if (userSnapshot.empty) {
       return res.status(404).json({ msg: "User tidak ditemukan" });
     }
@@ -304,7 +304,7 @@ export const updateEvaluasi = async (req, res) => {
 
   try {
     // 🔍 Cari user berdasarkan email
-    const userSnapshot = await usersCollection.where("email", "==", email).limit(1).get();
+    const userSnapshot = await siswaCollection.where("email", "==", email).limit(1).get();
     if (userSnapshot.empty) {
       return res.status(404).json({ msg: "User tidak ditemukan" });
     }

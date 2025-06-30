@@ -1,15 +1,15 @@
 import db from "../config/firebase.js";
 import jwt from "jsonwebtoken";
 
-const usersCollection = db.collection("users");
+const siswaCollection = db.collection("siswa");
 
 export const refreshToken = async (req, res) => {
   try {
     const refreshToken = req.cookies.refreshToken;
     if (!refreshToken) return res.sendStatus(401);
 
-    // Cari user berdasarkan refresh_token
-    const snapshot = await usersCollection
+    // Cari siswa berdasarkan refresh_token
+    const snapshot = await siswaCollection
       .where("refresh_token", "==", refreshToken)
       .limit(1)
       .get();
